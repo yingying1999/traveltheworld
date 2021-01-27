@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{~/reservation/search}">开始预订</a>
+<a th:href="@{~/reservation/search/1}">查看我的预订</a>
+<h2>查看我的预订</h2>  
+<table border="1px">
+    <tr>
+        <th>预约类型</th>
+        <th>预约的id</th>
+       
+    </tr>
+    <tr th:each="reservation :  ${reservationList}">
+        <th th:text="${reservation.resvType}">123</th>
+        <th th:text="${reservation.resvKey}">123</th>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
