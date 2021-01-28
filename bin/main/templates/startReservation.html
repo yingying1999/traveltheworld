@@ -5,11 +5,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a th:href="@{~/reservation/search}">开始预订</a>
+<a th:href="@{~/reservation/start}">开始预订</a>
 <a th:href="@{~/reservation/search/1}">查看我的预订</a>
+<a th:href="@{~/flight/manage/}">|管理员专用功能：航班管理</a>
 <h2>开始预订</h2>          
 <h3>航班查询</h3>          
-			<form  th:action="@{~/flight/search}" method="POST">
+			<form  th:action="@{~/flight/searchbycity}" method="POST">
 				<div id="form_container1">
 					<br />
 					出发城市<input type="text" class="form-control" placeholder="" id="fromCity" value="London" name="fromCity"/>

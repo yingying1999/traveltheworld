@@ -6,20 +6,24 @@
     <title>Insert title here</title>
 </head>
 <body>
-<a th:href="@{~/reservation/search}">开始预订</a>
+<a th:href="@{~/reservation/start}">开始预订</a>
 <a th:href="@{~/reservation/search/1}">查看我的预订</a>
+<a th:href="@{~/flight/manage/}">|管理员专用功能：航班管理</a>
 <h2>航班查询结果</h2>    
 <table border="1px">
     <tr>
         <th>航班号</th>
+        <th>出发城市</th>
+        <th>到达城市</th>
         <th>价格</th>
         <th>座位数</th>
         <th>座位余量</th>
         <th>现在预订</th>
-       
     </tr>
     <tr th:each="flight : ${flightList}">
         <th th:text="${flight.flightNum}">132</th>
+        <th th:text="${flight.fromCity}">132</th>
+        <th th:text="${flight.arivCity}">132</th>        
         <th th:text="${flight.price}">123</th>
         <th th:text="${flight.numSeats}">123</th>
         <th th:text="${flight.numAvail}">123</th>

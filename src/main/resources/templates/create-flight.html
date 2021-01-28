@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{~/reservation/start}">开始预订</a>
+<a th:href="@{~/reservation/search/1}">查看我的预订</a>
+<a th:href="@{~/flight/manage/}">|管理员专用功能：航班管理</a>
+<h2>新增航班</h2>  
+	<form action="" th:action="@{~/flight/create}" method="post">
+		航班号：
+		<input name="flightNum" type="text" >
+		出发城市：
+		<input name="fromCity" type="text">
+		到达城市：
+		<input name="arivCity" type="text">	
+		价格：
+		<input name="price" type="text" >
+		座位总数：
+		<input name="numSeats" type="text">
+		座位余量：
+		<input name="numAvail" type="text">
+		
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

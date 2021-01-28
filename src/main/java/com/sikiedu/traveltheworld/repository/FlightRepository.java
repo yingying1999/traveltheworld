@@ -7,5 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface FlightRepository extends CrudRepository<Flight, Long>{
 	
-	List<Flight> findByFromCityAndArivCity(String fromCity,String arivCity);			
+	List<Flight> findByFromCityAndArivCity(String fromCity,String arivCity);
+
 }

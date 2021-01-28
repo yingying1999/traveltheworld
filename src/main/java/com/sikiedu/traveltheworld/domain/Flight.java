@@ -14,12 +14,12 @@ public class Flight {
 	private Long companyID;
 	private String flightNum;
 	private String price;
-	private String numSeats;
-	private String numAvail;
+	private Long numSeats;
+	private Long numAvail;
 	private String fromCity;
 	private String arivCity;
-	public Flight(Long id, Long companyID, String flightNum, String price, String numSeats,
-			String numAvail, String fromCity, String arivCity) {
+	public Flight(Long id, Long companyID, String flightNum, String price, Long numSeats,
+			Long numAvail, String fromCity, String arivCity) {
 		super();
 		this.id = id;
 		this.companyID = companyID;
@@ -56,16 +56,16 @@ public class Flight {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public String getNumSeats() {
+	public Long getNumSeats() {
 		return numSeats;
 	}
-	public void setNumSeats(String numSeats) {
+	public void setNumSeats(Long numSeats) {
 		this.numSeats = numSeats;
 	}
-	public String getNumAvail() {
+	public Long getNumAvail() {
 		return numAvail;
 	}
-	public void setNumAvail(String numAvail) {
+	public void setNumAvail(Long numAvail) {
 		this.numAvail = numAvail;
 	}
 	public String getFromCity() {

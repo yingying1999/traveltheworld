@@ -9,7 +9,9 @@
 <a th:href="@{~/reservation/start}">开始预订</a>
 <a th:href="@{~/reservation/search/1}">查看我的预订</a>
 <a th:href="@{~/flight/manage/}">|管理员专用功能：航班管理</a>
-<h2>航班查询结果</h2>    
+<h2>航班管理</h2>  
+<a th:href="@{~/flight/startCreate/}">增加新的航班</a>  
+
 <table border="1px">
     <tr>
         <th>航班号</th>
@@ -18,17 +20,21 @@
         <th>价格</th>
         <th>座位数</th>
         <th>座位余量</th>
-        <th>现在预订</th>
+        <th>删除</th>
+        <th>修改</th>
     </tr>
     <tr th:each="flight : ${flightList}">
         <th th:text="${flight.flightNum}">132</th>
         <th th:text="${flight.fromCity}">132</th>
-        <th th:text="${flight.arivCity}">132</th>        
+        <th th:text="${flight.arivCity}">132</th>  
         <th th:text="${flight.price}">123</th>
         <th th:text="${flight.numSeats}">123</th>
         <th th:text="${flight.numAvail}">123</th>
         <th>
-            <a th:href="@{'~/reservation/create/flight/1/'+${flight.id}}">现在预订</a>
+            <a th:href="@{'~/flight/delete/'+${flight.id}}">删除</a>
+        </th>
+        <th>
+            <a th:href="@{'~/flight/startUpdate/'+${flight.id}}">修改</a>
         </th>
     </tr>
 

@@ -17,12 +17,14 @@ public class UserController {
 	{
 		return new ModelAndView("/index.html");
 	}
+	//用户注册
 	@RequestMapping("/user/register.action")
 	public ModelAndView register(User user)
 	{
 		userRepository.save(user);
 		return new ModelAndView("redirect:/index.action");
 	}
+	//用户登录
 	@RequestMapping("/user/login.action")
 	public ModelAndView login(User user)
 	{
@@ -33,7 +35,7 @@ public class UserController {
 		}
 		else
 		{
-			return new ModelAndView("/search.html");
+			return new ModelAndView("/startReservation.html");
 		}
 	}
 }
